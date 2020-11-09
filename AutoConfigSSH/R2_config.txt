@@ -1,0 +1,23 @@
+conf t
+username admin privilege 15 password admin01
+enable password 1234
+enable secret 12345678
+service password-encryption
+interface f2/0
+ip address 192.168.122.130 255.255.255.252
+no shutdown
+exit
+line vty 0 15
+password admin01
+login local
+transport input ssh telnet
+exit
+ip route 192.168.122.64 255.255.255.192 192.168.122.129
+ip route 192.168.122.0 255.255.255.192 192.168.122.129
+ip route 192.168.122.136 255.255.255.252 192.168.122.129
+ip route 192.168.122.132 255.255.255.252 192.168.122.129
+end
+write
+copy running-config startup-config
+
+
