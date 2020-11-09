@@ -1,0 +1,35 @@
+conf t
+enable secret 1234
+service password-encryption
+interface f1/0 
+ip add 148.204.60.1 255.255.255.0
+no shu
+interface f0/1 
+ip add 8.8.8.18 255.255.255.252
+no shu
+interface f0/0 
+ip add 8.8.8.10 255.255.255.252
+no shu
+exit
+ip domain-name adminredes.escom.ipn.mx
+ip ssh rsa keypair-name sshkey
+crypto key generate rsa usage-keys label sshkey modulus 1024
+ip ssh v 2
+ip ssh time-out 30
+ip ssh authentication-retries 3
+line vty 0 15
+password firulais
+login local
+transport input ssh
+exit
+username admin privilege 15 password firulais
+exit
+conf t
+router rip
+version 2
+network 148.204.0.0
+network 8.0.0.0
+no auto-summary
+end
+write
+copy running-config startup-config

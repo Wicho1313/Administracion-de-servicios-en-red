@@ -1,0 +1,36 @@
+conf t
+enable secret 1234
+service password-encryption
+interface loopback0
+ description loopback
+ ip address 192.168.1.1 255.255.255.255
+ no shutdown
+interface e1/0
+ ip addres 192.168.0.1 255.255.255.0
+ no shutdown
+interface fastEthernet0/0
+ ip addres 172.16.1.20 255.255.255.0
+ no shutdown
+ exit
+router ospf 1
+ passive-interface Loopback0
+ network 172.16.1.0 0.0.0.255 area 0
+ network 192.168.0.0 0.0.0.255 area 0
+ exit
+hostname iosv-1
+ip domain-name adminredes.escom.ipn.mx
+ip ssh rsa keypair-name sshkey
+crypto key generate rsa usage-keys label sshkey modulus 1024
+ip ssh v 2
+ip ssh time-out 30
+ip ssh authentication-retries 3
+line vty 0 15
+ password cisco
+ login local
+ transport input ssh telnet
+ exit
+username cisco privilege 15 password cisco
+end
+write
+
+

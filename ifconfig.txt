@@ -1,0 +1,6 @@
+ifconfig
+sudo ifconfig [red sin IP] [IP nueva] netmask [máscara de red]
+sudo route add default gw [puerta de enlace]
+
+sudo ifconfig enp0s8 192.168.0.10 netmask 255.255.255.0
+sudo route add default gw 192.168.0.1
