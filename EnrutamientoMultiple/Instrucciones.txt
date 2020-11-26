@@ -1,0 +1,20 @@
+Primero se deberá correr el programa EnrutamientoMultiple.py que importa el programa conexionSSH.py
+
+Si aun no está creado el archivo miRed.db (la base de datos), ingresar lo siguiente en otra consola de linux 
+con el programa EnrutamientoMultiple.py corriendo.
+
+http POST http://127.0.0.1:5000/dispositivos/ 'hostname'='R1' 'loopback'='192.168.1.0' 'ip'='10.0.5.254' 
+http POST http://127.0.0.1:5000/dispositivos/ 'hostname'='R2' 'loopback'='192.168.2.0' 'ip'='10.0.6.254' 
+http POST http://127.0.0.1:5000/dispositivos/ 'hostname'='R3' 'loopback'='192.168.3.0' 'ip'='10.0.7.254' 
+http POST http://127.0.0.1:5000/dispositivos/ 'hostname'='R4' 'loopback'='192.168.4.0' 'ip'='10.0.1.254' 
+
+si ya se tiene el archivo miRed.db simplemente abrir una ventana de un navegador y escribir en la barra de búsqueda:
+http://127.0.0.1:5000/dispositivos
+para encontrar la lista de dispositivos en nuestra base de datos 'miRed.db'
+
+y http://127.0.0.1:5000/dispositivos/3 para ver la información que contiene cualquier dispositivo
+
+para enrutar el R4 con todos los protocolos, se deberá tener el archivo R4_comandos, en el que se ingresan los comandos para enrutar, y que leerá el programa conexionSSH.py. En una ventana de un navegador escribir http://127.0.0.1:5000/dispositivos/4/enrutar y generará un archivo de texto con los comandos que ingresamos.
+
+Para ver la tabla de enrutamiento de cualquier dispositivo escribir en una ventana de navegador http://127.0.0.1:5000/dispositivos/4/tabla_enrutamiento
+

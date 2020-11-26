@@ -1,0 +1,34 @@
+conf t
+int loop 0
+ip add 192.168.2.0 255.255.255.255
+no shut
+interface f0/0
+ip address 10.0.6.254 255.255.255.0
+no shut
+interface f0/1
+ip address 10.0.3.253 255.255.255.0
+no shut
+exit
+ip domain-name adminredes.escom.ipn.mx
+ip ssh rsa keypair-name sshkey
+crypto key generate rsa usage-keys label sshkey modulus 1024
+ip ssh v 2
+ip ssh time-out 30
+ip ssh authentication-retries 3
+line vty 0 15
+password admin
+login local
+transport input ssh
+exit
+username admin privilege 15 password admin
+router rip
+version 2
+redistribute static
+redistribute ospf 1 match internal external 1 external 2
+default-information originate
+no auto-summary
+network 10.0.6.0
+network 10.0.3.0
+end 
+write
+copy running-config startup-config

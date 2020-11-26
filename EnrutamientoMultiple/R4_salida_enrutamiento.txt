@@ -1,0 +1,20 @@
+conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R4(config)#router ospf 1
+R4(config-router)#redistribute rip subnets
+R4(config-router)#redistribute static subnets
+R4(config-router)#net 10.0.4.0 0.0.0.255 area 0
+R4(config-router)#exit
+R4(config)#router rip
+R4(config-router)#version 2
+R4(config-router)#redistribute ospf 1 match internal external 1 external 2
+R4(config-router)#redistribute static
+R4(config-router)#no auto-summary
+R4(config-router)#default-information originate
+R4(config-router)#network 10.0.3.0 
+R4(config-router)#exit
+R4(config)#ip route 10.0.5.0 255.255.255.0 10.0.2.253
+R4(config)#ip route 10.0.6.0 255.255.255.0 10.0.3.253
+R4(config)#ip route 10.0.7.0 255.255.255.0 10.0.4.253
+R4(config)#end 
+R4#

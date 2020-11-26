@@ -1,0 +1,76 @@
+Nov 24 09:10:33.693 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Nov 24 09:10:33.694 HYPERVISOR: Started on IP = localhost, TCP port = 57359.
+Nov 24 09:10:34.089 HYPERVISOR: exec_cmd: hypervisor version 
+Nov 24 09:10:34.090 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\ameri\Documentos\ESCOM\7semestre\Redes3\EnrutamientoMultiple\project-files\dynamips 
+Nov 24 09:10:34.090 GENERAL: working_dir=C:\Users\ameri\Documentos\ESCOM\7semestre\Redes3\EnrutamientoMultiple\project-files\dynamips
+Nov 24 09:10:34.090 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\ameri\Documentos\ESCOM\7semestre\Redes3\EnrutamientoMultiple\project-files\dynamips\679e80a3-f050-4194-becb-ed0b5f8132a2 
+Nov 24 09:10:34.141 GENERAL: working_dir=C:\Users\ameri\Documentos\ESCOM\7semestre\Redes3\EnrutamientoMultiple\project-files\dynamips\679e80a3-f050-4194-becb-ed0b5f8132a2
+Nov 24 09:10:34.141 HYPERVISOR: exec_cmd: vm create R1 1 c7200 
+Nov 24 09:10:34.271 VM: VM R1 created.
+Nov 24 09:10:34.272 HYPERVISOR: exec_cmd: vm set_con_tcp_port R1 5009 
+Nov 24 09:10:34.272 HYPERVISOR: exec_cmd: c7200 get_mac_addr R1 
+Nov 24 09:10:34.273 HYPERVISOR: exec_cmd: vm get_status R1 
+Nov 24 09:10:34.273 HYPERVISOR: exec_cmd: vm slot_add_binding R1 0 0 C7200-IO-FE 
+Nov 24 09:10:34.273 HYPERVISOR: exec_cmd: vm set_disk0 R1 0 
+Nov 24 09:10:34.274 HYPERVISOR: exec_cmd: vm set_exec_area R1 64 
+Nov 24 09:10:34.274 HYPERVISOR: exec_cmd: vm get_status R1 
+Nov 24 09:10:34.274 HYPERVISOR: exec_cmd: vm set_idle_pc R1 0x608927c0 
+Nov 24 09:10:34.275 HYPERVISOR: exec_cmd: vm set_ios R1 C:/Users/ameri/Documentos/ESCOM/7semestre/Redes3/Config_basic_gns3/imagenes router/c7200-a3jk9s-mz.124-25g.image 
+Nov 24 09:10:34.275 HYPERVISOR: exec_cmd: c7200 set_mac_addr R1 ca01.3084.0000 
+Nov 24 09:10:34.275 HYPERVISOR: exec_cmd: vm set_nvram R1 512 
+Nov 24 09:10:34.276 HYPERVISOR: exec_cmd: vm set_ram R1 512 
+Nov 24 09:10:34.276 HYPERVISOR: exec_cmd: vm get_status R1 
+Nov 24 09:10:34.276 HYPERVISOR: exec_cmd: vm slot_remove_binding R1 0 0 
+Nov 24 09:10:34.277 HYPERVISOR: exec_cmd: vm get_status R1 
+Nov 24 09:10:34.277 HYPERVISOR: exec_cmd: vm slot_add_binding R1 0 0 C7200-IO-2FE 
+Nov 24 09:10:34.277 HYPERVISOR: exec_cmd: vm get_status R1 
+Nov 24 09:10:34.278 HYPERVISOR: exec_cmd: vm slot_add_binding R1 1 0 PA-2FE-TX 
+Nov 24 09:10:34.279 HYPERVISOR: exec_cmd: vm get_status R1 
+Nov 24 09:10:34.279 HYPERVISOR: exec_cmd: vm slot_add_binding R1 2 0 PA-2FE-TX 
+Nov 24 09:10:34.280 HYPERVISOR: exec_cmd: vm get_status R1 
+Nov 24 09:10:34.280 HYPERVISOR: exec_cmd: vm slot_add_binding R1 3 0 PA-FE-TX 
+Nov 24 09:10:49.434 HYPERVISOR: exec_cmd: nio create_udp udp-78169d1f-e68f-486a-aa62-fe5ee7df7395 10004 127.0.0.1 10005 
+Nov 24 09:10:51.942 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 0 0 udp-78169d1f-e68f-486a-aa62-fe5ee7df7395 
+Nov 24 09:10:51.943 HYPERVISOR: exec_cmd: vm get_status R1 
+Nov 24 09:10:53.495 HYPERVISOR: exec_cmd: nio create_udp udp-27a28d12-0c44-4052-a439-702703bc7777 10020 127.0.0.1 10021 
+Nov 24 09:10:53.556 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R1 0 1 udp-27a28d12-0c44-4052-a439-702703bc7777 
+Nov 24 09:10:53.557 HYPERVISOR: exec_cmd: vm get_status R1 
+Nov 24 09:12:46.696 HYPERVISOR: exec_cmd: vm create Ghost 0 c7200 
+Nov 24 09:12:46.698 VM: VM Ghost created.
+Nov 24 09:12:46.699 HYPERVISOR: exec_cmd: vm set_ios Ghost C:/Users/ameri/Documentos/ESCOM/7semestre/Redes3/Config_basic_gns3/imagenes router/c7200-a3jk9s-mz.124-25g.image 
+Nov 24 09:12:46.701 HYPERVISOR: exec_cmd: vm set_ghost_status Ghost 1 
+Nov 24 09:12:46.701 HYPERVISOR: exec_cmd: vm set_ghost_file Ghost C:\Users\ameri\Documentos\ESCOM\7semestre\Redes3\EnrutamientoMultiple\project-files\dynamips\c7200-a3jk9s-mz.124-25g.image-512.ghost 
+Nov 24 09:12:46.701 HYPERVISOR: exec_cmd: vm set_ram Ghost 512 
+Nov 24 09:12:46.703 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Nov 24 09:12:46.733 HYPERVISOR: exec_cmd: vm set_config Ghost configs\i0_startup-config.cfg 
+Nov 24 09:12:46.734 HYPERVISOR: exec_cmd: vm start Ghost 
+Nov 24 09:12:47.883 HYPERVISOR: exec_cmd: vm get_status Ghost 
+Nov 24 09:12:47.884 HYPERVISOR: exec_cmd: vm stop Ghost 
+Nov 24 09:12:48.442 VM: VM Ghost shutdown.
+Nov 24 09:12:48.443 HYPERVISOR: exec_cmd: vm extract_config Ghost 
+Nov 24 09:12:48.444 HYPERVISOR: exec_cmd: vm clean_delete Ghost 
+Nov 24 09:12:48.444 VM: VM Ghost destroyed.
+Nov 24 09:12:48.532 HYPERVISOR: exec_cmd: vm set_ghost_status R1 2 
+Nov 24 09:12:48.533 HYPERVISOR: exec_cmd: vm set_ghost_file R1 C:\Users\ameri\Documentos\ESCOM\7semestre\Redes3\EnrutamientoMultiple\project-files\dynamips\c7200-a3jk9s-mz.124-25g.image-512.ghost 
+Nov 24 09:12:48.533 HYPERVISOR: exec_cmd: vm get_status R1 
+Nov 24 09:12:48.534 HYPERVISOR: exec_cmd: vm set_config R1 configs\i1_startup-config.cfg configs\i1_private-config.cfg 
+Nov 24 09:12:48.535 HYPERVISOR: exec_cmd: vm start R1 
+Nov 24 15:14:49.769 HYPERVISOR: exec_cmd: vm extract_config R1 
+Nov 24 16:29:49.908 HYPERVISOR: exec_cmd: vm extract_config R1 
+Nov 24 16:31:17.246 HYPERVISOR: exec_cmd: vm get_status R1 
+Nov 24 16:31:17.246 HYPERVISOR: exec_cmd: vm slot_disable_nio R1 0 0 
+Nov 24 16:31:17.262 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding R1 0 0 
+Nov 24 16:31:17.264 HYPERVISOR: exec_cmd: nio delete udp-78169d1f-e68f-486a-aa62-fe5ee7df7395 
+Nov 24 16:31:17.340 HYPERVISOR: exec_cmd: vm get_status R1 
+Nov 24 16:31:17.341 HYPERVISOR: exec_cmd: vm slot_disable_nio R1 0 1 
+Nov 24 16:31:17.345 HYPERVISOR: exec_cmd: vm slot_remove_nio_binding R1 0 1 
+Nov 24 16:31:17.346 HYPERVISOR: exec_cmd: nio delete udp-27a28d12-0c44-4052-a439-702703bc7777 
+Nov 24 16:31:17.878 HYPERVISOR: exec_cmd: vm get_status R1 
+Nov 24 16:31:17.878 HYPERVISOR: exec_cmd: vm stop R1 
+Nov 24 16:31:18.015 VM: VM R1 shutdown.
+Nov 24 16:31:18.016 HYPERVISOR: exec_cmd: vm extract_config R1 
+Nov 24 16:31:18.018 HYPERVISOR: exec_cmd: vm delete R1 
+Nov 24 16:31:18.018 VM: VM R1 destroyed.
+Nov 24 16:31:18.020 HYPERVISOR: exec_cmd: hypervisor stop 
+Nov 24 16:31:18.135 HYPERVISOR: Stopped.
+Nov 24 16:31:18.135 GENERAL: reset done.
