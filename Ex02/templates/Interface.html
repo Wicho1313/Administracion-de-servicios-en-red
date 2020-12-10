@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Editar Interface</title>
+</head>
+<body>
+	{% for f in data %}
+   
+       <li>{{f}} : {{data[f]}}</li>
+    
+{% endfor %}
+
+<br><br>
+<form action ="/EditInterface" id="editU" method="post">
+		<label for="hostname">Hostname: </label>
+		<input type="text" id="hostname" name="hostname" readonly value="{{data.hostname}}" /><br>
+		<input type="hidden" id="name" name="name" value="{{data.name}}" readonly/>
+
+		<label for="newName">Nombre : </label>
+		<input type="text" id="newName" name="newName" value="{{data.name}}" required/><br>
+
+
+		<label for="IPInt">Ip de Interfaz : </label>
+		<input type="text" id="IPInt" name="IPInt" required/><br>
+
+		<label for="mascara">mascara: </label>
+		<input type="text" id="mascara" name="mascara" required/><br>
+
+		<label for="subred">subred : </label>
+		<input type="text" id="subred" name="subred" required/><br>
+
+		<input type="submit" id="send-signup" name="signup" value="Editar" />
+</form>
+</body>
+</html>

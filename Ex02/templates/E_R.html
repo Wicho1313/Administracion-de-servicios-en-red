@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Modulo de edicion</title>
+</head>
+<body>
+	<h2>Editar un router</h2>
+	<form action ="/EditRouter" id="edit" method="post">
+		<label for="hostname">Hostname: </label>
+		<input type="text" id="hostname" name="hostname"/><br>
+		<label for="id">IP mas alta (id) : </label>
+		<input type="text" id="id" name="id"/><br>
+		<label for="marca">Marca : </label>
+		<input type="text" id="marca" name="marca"/><br>
+		<label for="so">Sistema operativo: </label>
+		<input type="text" id="so" name="so"/><br>
+		<label for="inter">num interfaces: </label>
+		<input type="text" id="inter" name="inter"/><br>
+		<input type="submit" id="send-signup" name="signup" value="Aceptar" />
+	</form><br>
+
+	<h2>Crear un nuevo usuario</h2>
+		<form action ="/CrearUser" id="nUser" method="post">
+		<label for="hostname">Hostname: </label>
+		<input type="text" id="hostname" name="hostname" required /><br>
+
+		<label for="newUser">Usuario : </label>
+		<input type="text" id="newUser" name="newUser" required/><br>
+
+		<label for="pass">password : </label>
+		<input type="text" id="pass" name="pass" required/><br>
+
+		<input type="submit" id="ok" name="ok" value="Crear" />
+</form>
+</body>
+</html>

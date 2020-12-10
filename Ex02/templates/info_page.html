@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Menu principal</title>
+</head>
+<body>
+	<img src=" {{ url_for('static', filename='red.png') }}" width="600" height="400">
+	<form action="/Routers" method="post" id="nameform" target="_blank"></form>
+	<button type="submit" form="nameform" value="Submit">Ver informacion de routers</button>
+	<a href="{{ url_for('EditarRouter') }}" target="_blank">Modulo de edicion</a>
+	
+
+</body>
+</html>

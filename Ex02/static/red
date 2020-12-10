@@ -1,0 +1,37 @@
+graph red {
+	"linux mint" [label="MV
+148.204.56.1" shape=rectangle]
+	switch [shape=rectangle]
+	"linux mint" -- switch
+	R1 [label="R1
+FastEthernet0/1 8.8.8.12 8.8.8.13 255.255.255.252 
+FastEthernet0/0 8.8.8.16 8.8.8.17 255.255.255.252 
+FastEthernet1/0 148.204.56.0 148.204.56.1 255.255.255.0 
+" shape=rectangle]
+	R2 [label="R2
+FastEthernet0/1 8.8.8.8 8.8.8.9 255.255.255.252 
+FastEthernet1/0 8.8.8.12 8.8.8.14 255.255.255.252 
+" shape=rectangle]
+	R3 [label="R3
+FastEthernet0/0 8.8.8.8 8.8.8.10 255.255.255.252 
+FastEthernet0/1 8.8.8.16 8.8.8.18 255.255.255.252 
+" shape=rectangle]
+	R4 [label="R4
+FastEthernet0/1 8.8.8.0 8.8.8.1 255.255.255.252 
+FastEthernet1/0 8.8.8.4 8.8.8.5 255.255.255.252 
+FastEthernet0/0 148.204.56.0 148.204.56.2 255.255.255.0 
+" shape=rectangle]
+	R5 [label="R5
+FastEthernet0/0 8.8.8.4 8.8.8.6 255.255.255.252 
+" shape=rectangle]
+	R6 [label="R6
+FastEthernet0/0 8.8.8.0 8.8.8.2 255.255.255.252 
+" shape=rectangle]
+	R1 -- R2 [label="8.8.8.12"]
+	R1 -- R3 [label="8.8.8.16"]
+	switch -- R1 [label="148.204.56.0"]
+	switch -- R4 [label="148.204.56.0"]
+	R2 -- R3 [label="8.8.8.8"]
+	R4 -- R6 [label="8.8.8.0"]
+	R4 -- R5 [label="8.8.8.4"]
+}

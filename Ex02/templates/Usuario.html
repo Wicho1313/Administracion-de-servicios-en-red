@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Consulta de usuario</title>
+</head>
+<body>
+	{% for f in data %}
+   
+       <li>{{f}} : {{data[f]}}</li>
+    
+{% endfor %}
+<br><br>
+<form action ="/EditUser" id="editU" method="post">
+		<label for="hostname">Hostname: </label>
+		<input type="text" id="hostname" name="hostname" readonly value="{{data.hostname}}" /><br>
+		<input type="hidden" id="usr" name="usr" value="{{data.Usuario}}" readonly/>
+
+		<label for="newUser">Usuario : </label>
+		<input type="text" id="newUser" name="newUser" required/><br>
+
+		<label for="pass">Ip Nuevo password : </label>
+		<input type="text" id="pass" name="pass" required/><br>
+
+		<input type="submit" id="ok" name="ok" value="Editar" />
+</form>
+<form action ="/EliminaUser" id="delU" method="post">
+		
+		<input type="hidden" id="hostname" name="hostname" readonly value="{{data.hostname}}" />
+		<input type="hidden" id="usr" name="usr" value="{{data.Usuario}}" readonly/>
+		<input type="submit" id="del" name="del" value="Eliminar" />
+</form>
+
+</body>
+</html>
