@@ -1,0 +1,9 @@
+# This the configuration for PC3
+#
+# Uncomment the following line to enable DHCP
+# dhcp
+# or the line below to manually setup an IP address and subnet mask
+ip 192.168.20.120/24 192.168.20.1
+#
+
+set pcname PC3

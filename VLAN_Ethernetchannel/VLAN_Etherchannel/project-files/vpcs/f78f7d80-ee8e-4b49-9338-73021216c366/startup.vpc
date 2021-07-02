@@ -1,0 +1,10 @@
+# This the configuration for PC2
+#
+# Uncomment the following line to enable DHCP
+# dhcp
+# or the line below to manually setup an IP address and subnet mask
+ip 192.168.50.110/24 192.168.50.1
+# ip 192.168.30.110/24 192.168.30.1
+#
+
+set pcname PC2

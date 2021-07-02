@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Modulo de inicio sesión</title>
+</head>
+<body>
+	<h2>Iniciar sesión en router o switch (ssh)</h2>
+	<h3>Ingresa la dirección IP, usuario y contraseña para acceder</h3>
+	<form action ="/dispositivo" id="consult" method="post">
+
+		<label for="device">Dispositivo: </label>
+		<input type="text" id="device" name="device"/><br>
+		
+		<label for="ip">IP: </label>
+		<input type="text" id="ip" name="ip"/><br>
+		
+		<label for="usuario">Usuario: </label>
+		<input type="text" id="usuario" name="usuario"/><br>
+		
+		<label for="contra">Contraseña: </label>
+		<input type="text" id="contra" name="contra"/><br>
+		
+		<input type="submit" id="send-signup" name="signup" value="Aceptar" />
+	</form>
+</body>
+</html>

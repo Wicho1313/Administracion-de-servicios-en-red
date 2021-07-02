@@ -1,0 +1,238 @@
+#SW1
+configure terminal
+enable secret 1234
+service password-encryption
+ip domain-name adminredes.escom.ipn.mx
+ip ssh rsa keypair-name sshkey
+crypto key generate rsa usage-key label sshkey modulus 1024
+ip ssh v 2
+ip ssh time-out 30
+ip ssh authentication-retries 3
+line vty 0 15
+password cisco
+login local
+transport input ssh
+exit
+username cisco privilege 15 password cisco
+interface fastEthernet 0/0
+no shu
+channel-group 1 mode on
+interface fastEthernet 0/1
+no shu
+channel-group 1 mode on
+interface fastEthernet 0/2
+no shu
+channel-group 1 mode on
+interface fastEthernet 0/3
+no shu
+channel-group 1 mode on
+interface fa0/15
+switchport access vlan 30
+exit
+interface vlan 1
+ip address 192.168.1.11 255.255.255.0
+no shutdown
+interface vlan 10
+ip address 192.168.10.1 255.255.255.0
+no shutdown
+interface vlan 20
+ip address 192.168.20.1 255.255.255.0
+no shutdown
+interface vlan 30
+ip address 192.168.30.1 255.255.255.0
+no shutdown
+exit
+interface port-channel 1
+switchport mode trunk
+switchport trunk allowed vlan all
+end
+vlan database
+vtp domain admin-vlan
+vtp password 12345678
+vtp v2-mode
+vtp pruning v2-mode
+vtp server
+vlan 10 name VLAN10
+vlan 20 name VLAN20
+vlan 30 name VLAN30
+exit
+write
+show etherchannel 1 port-channel
+show vtp status
+
+#SW2
+configure terminal
+enable secret 1234
+service password-encryption
+ip domain-name adminredes.escom.ipn.mx
+ip ssh rsa keypair-name sshkey
+crypto key generate rsa usage-key label sshkey modulus 1024
+ip ssh v 2
+ip ssh time-out 30
+ip ssh authentication-retries 3
+line vty 0 15
+password cisco
+login local
+transport input ssh
+exit
+username cisco privilege 15 password cisco
+interface fastEthernet 0/0
+no shu
+channel-group 1 mode on
+interface fastEthernet 0/1
+no shu
+channel-group 1 mode on
+interface fastEthernet 0/2
+no shu
+channel-group 1 mode on
+interface fastEthernet 0/3
+no shu
+channel-group 1 mode on
+exit
+interface fastEthernet 0/4
+no shu
+channel-group 2 mode on
+interface fastEthernet 0/5
+no shu
+channel-group 2 mode on
+interface fastEthernet 0/6
+no shu
+channel-group 2 mode on
+interface fastEthernet 0/7
+no shu
+channel-group 2 mode on
+interface fa0/15
+switchport access vlan 10
+exit
+interface vlan 1
+ip address 192.168.1.12 255.255.255.0
+no shutdown
+interface vlan 10
+ip address 192.168.10.1 255.255.255.0
+no shutdown
+interface vlan 20
+ip address 192.168.20.1 255.255.255.0
+no shutdown
+interface vlan 30
+ip address 192.168.30.1 255.255.255.0
+no shutdown
+exit
+interface port-channel 1
+switchport mode trunk
+switchport trunk allowed vlan all
+exit
+interface port-channel 2
+switchport mode trunk
+switchport trunk allowed vlan all
+end
+vlan database
+vtp domain admin-vlan
+vtp password 12345678
+vtp v2-mode
+vtp pruning v2-mode
+vtp client
+vlan 10 name VLAN10
+vlan 20 name VLAN20
+vlan 30 name VLAN30
+exit
+write
+show etherchannel 1 port-channel
+show etherchannel 2 port-channel
+show vtp status
+
+#SW3
+configure terminal
+enable secret 1234
+service password-encryption
+ip domain-name adminredes.escom.ipn.mx
+ip ssh rsa keypair-name sshkey
+crypto key generate rsa usage-key label sshkey modulus 1024
+ip ssh v 2
+ip ssh time-out 30
+ip ssh authentication-retries 3
+line vty 0 15
+password cisco
+login local
+transport input ssh
+exit
+username cisco privilege 15 password cisco
+interface fastEthernet 0/4
+no shu
+channel-group 2 mode on
+interface fastEthernet 0/5
+no shu
+channel-group 2 mode on
+interface fastEthernet 0/6
+no shu
+channel-group 2 mode on
+interface fastEthernet 0/7
+no shu
+channel-group 2 mode on
+interface fa0/15
+switchport access vlan 20
+interface port-channel 2
+switchport mode trunk
+switchport trunk encapsulation dot1q
+switchport trunk allowed vlan all
+exit
+interface vlan 1
+ip address 192.168.1.13 255.255.255.0
+no shutdown
+interface vlan 10
+ip address 192.168.10.1 255.255.255.0
+no shutdown
+interface vlan 20
+ip address 192.168.20.1 255.255.255.0
+no shutdown
+interface vlan 30
+ip address 192.168.30.1 255.255.255.0
+no shutdown
+exit
+interface port-channel 2
+switchport mode trunk
+switchport trunk allowed vlan all
+end
+vlan database
+vtp domain admin-vlan
+vtp password 12345678
+vtp v2-mode
+vtp pruning v2-mode
+vtp client
+vlan 10 name VLAN10
+vlan 20 name VLAN20
+vlan 30 name VLAN30
+exit
+write
+show etherchannel 1 port-channel
+show vtp status
+
+#R1
+configure terminal
+enable secret 1234
+service password-encryption
+ip domain-name adminredes.escom.ipn.mx
+ip ssh rsa keypair-name sshkey
+crypto key generate rsa usage-key label sshkey modulus 1024
+ip ssh v 2
+ip ssh time-out 30
+ip ssh authentication-retries 3
+line vty 0 15
+password cisco
+login local
+transport input ssh
+exit
+username cisco privilege 15 password cisco
+interface fastethernet 0/0
+ip address 192.168.1.1 255.255.255.0
+no shutdown
+interface fastethernet 0/0.10
+encapsulation dot1Q 10
+ip address 192.168.10.1 255.255.255.0
+interface fastethernet 0/0.20
+encapsulation dot1Q 20
+ip address 192.168.20.1 255.255.255.0
+interface fastethernet 0/0.30
+encapsulation dot1Q 30
+ip address 192.168.30.1 255.255.255.0
+end
+wr

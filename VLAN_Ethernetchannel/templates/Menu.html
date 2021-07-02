@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Menú</title>
+</head>
+<body>
+	{% for f in data %}
+   
+       <li>{{f}}</li>
+    
+	{% endfor %}
+	<br><br>
+	<h2>Consultar las VLAN existentes e interfaces relacionadas</h2>
+	<form action ="/ConsultaVLAN" id="edit" method="post">
+		
+		<input type="submit" id="ok" name="ok" value="Consultar">
+	
+	</form><br>
+	
+	<h2>Crear una nueva VLAN</h2>
+	<form action ="/CrearVLAN" id="NVLAN" method="post">
+		
+		<input type="submit" id="ok" name="ok" value="Crear nueva VLAN">
+
+	</form><br>
+
+	<h2>Borrar una VLAN</h2>
+	<form action ="/BorrarVLAN" id="NVLAN" method="post">
+		
+		<input type="submit" id="ok" name="ok" value="Borrar una VLAN">
+
+	</form>
+</body>
+</html>

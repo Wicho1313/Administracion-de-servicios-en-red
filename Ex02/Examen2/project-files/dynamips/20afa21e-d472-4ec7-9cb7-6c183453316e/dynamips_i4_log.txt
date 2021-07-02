@@ -1,0 +1,56 @@
+Dec 10 12:59:39.233 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Dec 10 12:59:39.234 HYPERVISOR: Started on IP = localhost, TCP port = 51089.
+Dec 10 12:59:39.712 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 10 12:59:39.713 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\ameri\Documentos\ESCOM\7semestre\Redes3\Ex02\Examen2\project-files\dynamips 
+Dec 10 12:59:39.714 GENERAL: working_dir=C:\Users\ameri\Documentos\ESCOM\7semestre\Redes3\Ex02\Examen2\project-files\dynamips
+Dec 10 12:59:39.714 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\ameri\Documentos\ESCOM\7semestre\Redes3\Ex02\Examen2\project-files\dynamips\2c83e077-26c5-4bda-98cf-5adb4e56bf84 
+Dec 10 12:59:39.716 GENERAL: working_dir=C:\Users\ameri\Documentos\ESCOM\7semestre\Redes3\Ex02\Examen2\project-files\dynamips\2c83e077-26c5-4bda-98cf-5adb4e56bf84
+Dec 10 12:59:39.716 HYPERVISOR: exec_cmd: vm create R3 3 c7200 
+Dec 10 12:59:39.720 VM: VM R3 created.
+Dec 10 12:59:39.721 HYPERVISOR: exec_cmd: vm set_con_tcp_port R3 5010 
+Dec 10 12:59:39.722 HYPERVISOR: exec_cmd: c7200 get_mac_addr R3 
+Dec 10 12:59:39.723 HYPERVISOR: exec_cmd: vm get_status R3 
+Dec 10 12:59:39.723 HYPERVISOR: exec_cmd: vm slot_add_binding R3 0 0 C7200-IO-FE 
+Dec 10 12:59:39.725 HYPERVISOR: exec_cmd: vm set_disk0 R3 0 
+Dec 10 12:59:39.726 HYPERVISOR: exec_cmd: vm set_exec_area R3 64 
+Dec 10 12:59:39.727 HYPERVISOR: exec_cmd: vm get_status R3 
+Dec 10 12:59:39.727 HYPERVISOR: exec_cmd: vm set_idle_pc R3 0x608927c0 
+Dec 10 12:59:39.730 HYPERVISOR: exec_cmd: vm set_ios R3 C:/Users/ameri/Documentos/ESCOM/7semestre/Redes3/Config_basic_gns3/imagenes router/c7200-a3jk9s-mz.124-25g.image 
+Dec 10 12:59:39.731 HYPERVISOR: exec_cmd: c7200 set_mac_addr R3 ca03.2338.0000 
+Dec 10 12:59:39.732 HYPERVISOR: exec_cmd: vm set_nvram R3 512 
+Dec 10 12:59:39.733 HYPERVISOR: exec_cmd: vm set_ram R3 512 
+Dec 10 12:59:39.734 HYPERVISOR: exec_cmd: vm get_status R3 
+Dec 10 12:59:39.734 HYPERVISOR: exec_cmd: vm slot_remove_binding R3 0 0 
+Dec 10 12:59:39.735 HYPERVISOR: exec_cmd: vm get_status R3 
+Dec 10 12:59:39.736 HYPERVISOR: exec_cmd: vm slot_add_binding R3 0 0 C7200-IO-2FE 
+Dec 10 12:59:39.736 HYPERVISOR: exec_cmd: vm get_status R3 
+Dec 10 12:59:39.737 HYPERVISOR: exec_cmd: vm slot_add_binding R3 1 0 PA-2FE-TX 
+Dec 10 12:59:39.738 HYPERVISOR: exec_cmd: vm get_status R3 
+Dec 10 12:59:39.738 HYPERVISOR: exec_cmd: vm slot_add_binding R3 2 0 PA-2FE-TX 
+Dec 10 12:59:39.739 HYPERVISOR: exec_cmd: vm get_status R3 
+Dec 10 12:59:39.739 HYPERVISOR: exec_cmd: vm slot_add_binding R3 3 0 PA-FE-TX 
+Dec 10 12:59:42.540 HYPERVISOR: exec_cmd: nio create_udp udp-9ac40112-d5a1-4a1e-81a9-8147f98f67d3 10018 127.0.0.1 10019 
+Dec 10 12:59:42.807 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R3 0 0 udp-9ac40112-d5a1-4a1e-81a9-8147f98f67d3 
+Dec 10 12:59:42.807 HYPERVISOR: exec_cmd: vm get_status R3 
+Dec 10 12:59:42.862 HYPERVISOR: exec_cmd: nio create_udp udp-7c69f1bd-ed5c-4a14-b0cb-481759984561 10024 127.0.0.1 10025 
+Dec 10 12:59:42.865 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R3 0 1 udp-7c69f1bd-ed5c-4a14-b0cb-481759984561 
+Dec 10 12:59:42.865 HYPERVISOR: exec_cmd: vm get_status R3 
+Dec 10 12:59:42.927 HYPERVISOR: exec_cmd: nio create_udp udp-111639db-044c-476d-82ed-63959e23f718 10030 127.0.0.1 10031 
+Dec 10 12:59:42.929 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R3 1 0 udp-111639db-044c-476d-82ed-63959e23f718 
+Dec 10 12:59:42.930 HYPERVISOR: exec_cmd: vm get_status R3 
+Dec 10 12:59:51.023 HYPERVISOR: exec_cmd: vm set_ghost_status R3 2 
+Dec 10 12:59:51.024 HYPERVISOR: exec_cmd: vm set_ghost_file R3 C:\Users\ameri\Documentos\ESCOM\7semestre\Redes3\Ex02\Examen2\project-files\dynamips\c7200-a3jk9s-mz.124-25g.image-512.ghost 
+Dec 10 12:59:51.024 HYPERVISOR: exec_cmd: vm get_status R3 
+Dec 10 12:59:51.025 HYPERVISOR: exec_cmd: vm set_config R3 configs\i3_startup-config.cfg configs\i3_private-config.cfg 
+Dec 10 12:59:51.026 HYPERVISOR: exec_cmd: vm start R3 
+Dec 10 13:24:27.351 HYPERVISOR: exec_cmd: vm get_status R3 
+Dec 10 13:24:27.351 HYPERVISOR: exec_cmd: vm stop R3 
+Dec 10 13:24:27.576 VM: VM R3 shutdown.
+Dec 10 13:24:27.577 HYPERVISOR: exec_cmd: vm extract_config R3 
+Dec 10 13:24:28.148 HYPERVISOR: exec_cmd: vm get_status R3 
+Dec 10 13:24:28.149 HYPERVISOR: exec_cmd: vm extract_config R3 
+Dec 10 13:24:28.152 HYPERVISOR: exec_cmd: vm delete R3 
+Dec 10 13:24:28.152 VM: VM R3 destroyed.
+Dec 10 13:24:28.154 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 10 13:24:28.501 HYPERVISOR: Stopped.
+Dec 10 13:24:28.501 GENERAL: reset done.

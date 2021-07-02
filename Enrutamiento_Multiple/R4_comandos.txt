@@ -1,0 +1,18 @@
+conf t
+router ospf 1
+redistribute rip subnets
+redistribute static subnets
+net 10.0.4.0 0.0.0.255 area 0
+exit
+router rip
+version 2
+redistribute ospf 1 match internal external 1 external 2
+redistribute static
+no auto-summary
+default-information originate
+network 10.0.3.0 
+exit
+ip route 10.0.5.0 255.255.255.0 10.0.2.253
+ip route 10.0.6.0 255.255.255.0 10.0.3.253
+ip route 10.0.7.0 255.255.255.0 10.0.4.253
+end 

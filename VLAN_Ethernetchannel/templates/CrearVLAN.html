@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Crear una nueva VLAN</title>
+</head>
+<body>
+	
+	<h2>Formulario para crear una VLAN</h2>
+	<form action ="/FormCrearVLAN" id="consult" method="post">
+
+		<label for="numero">Numero: </label>
+		<input type="text" id="numero" name="numero"/><br>
+		
+		<label for="nombre">Nombre: </label>
+		<input type="text" id="nombre" name="nombre"/><br>
+		
+		<label for="ipVlan">IP: </label>
+		<input type="text" id="ipVlan" name="ipVlan"/><br>
+		
+		<label for="mascara">Máscara: </label>
+		<input type="text" id="mascara" name="mascara"/><br>
+        
+        <label for="interfaz">Interfaz: </label>
+		<input type="text" id="interfaz" name="interfaz"/><br>
+		
+		<input type="submit" id="send-signup" name="signup" value="Aceptar" />
+	</form>
+
+</body>
+</html>

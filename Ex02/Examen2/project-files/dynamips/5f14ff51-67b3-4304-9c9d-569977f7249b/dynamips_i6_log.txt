@@ -1,0 +1,53 @@
+Dec 10 12:59:40.393 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Dec 10 12:59:40.394 HYPERVISOR: Started on IP = localhost, TCP port = 51095.
+Dec 10 12:59:40.877 HYPERVISOR: exec_cmd: hypervisor version 
+Dec 10 12:59:40.877 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\ameri\Documentos\ESCOM\7semestre\Redes3\Ex02\Examen2\project-files\dynamips 
+Dec 10 12:59:40.877 GENERAL: working_dir=C:\Users\ameri\Documentos\ESCOM\7semestre\Redes3\Ex02\Examen2\project-files\dynamips
+Dec 10 12:59:40.877 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\ameri\Documentos\ESCOM\7semestre\Redes3\Ex02\Examen2\project-files\dynamips\ee8d0c1e-2051-4df4-afa5-60092a583866 
+Dec 10 12:59:40.901 GENERAL: working_dir=C:\Users\ameri\Documentos\ESCOM\7semestre\Redes3\Ex02\Examen2\project-files\dynamips\ee8d0c1e-2051-4df4-afa5-60092a583866
+Dec 10 12:59:40.901 HYPERVISOR: exec_cmd: vm create R5 5 c7200 
+Dec 10 12:59:40.903 VM: VM R5 created.
+Dec 10 12:59:40.903 HYPERVISOR: exec_cmd: vm set_con_tcp_port R5 5012 
+Dec 10 12:59:40.903 HYPERVISOR: exec_cmd: c7200 get_mac_addr R5 
+Dec 10 12:59:40.904 HYPERVISOR: exec_cmd: vm get_status R5 
+Dec 10 12:59:40.904 HYPERVISOR: exec_cmd: vm slot_add_binding R5 0 0 C7200-IO-FE 
+Dec 10 12:59:40.904 HYPERVISOR: exec_cmd: vm set_disk0 R5 0 
+Dec 10 12:59:40.905 HYPERVISOR: exec_cmd: vm set_exec_area R5 64 
+Dec 10 12:59:40.905 HYPERVISOR: exec_cmd: vm get_status R5 
+Dec 10 12:59:40.905 HYPERVISOR: exec_cmd: vm set_idle_pc R5 0x608927c0 
+Dec 10 12:59:40.906 HYPERVISOR: exec_cmd: vm set_ios R5 C:/Users/ameri/Documentos/ESCOM/7semestre/Redes3/Config_basic_gns3/imagenes router/c7200-a3jk9s-mz.124-25g.image 
+Dec 10 12:59:40.906 HYPERVISOR: exec_cmd: c7200 set_mac_addr R5 ca05.25b4.0000 
+Dec 10 12:59:40.907 HYPERVISOR: exec_cmd: vm set_nvram R5 512 
+Dec 10 12:59:40.907 HYPERVISOR: exec_cmd: vm set_ram R5 512 
+Dec 10 12:59:40.908 HYPERVISOR: exec_cmd: vm get_status R5 
+Dec 10 12:59:40.908 HYPERVISOR: exec_cmd: vm slot_remove_binding R5 0 0 
+Dec 10 12:59:40.908 HYPERVISOR: exec_cmd: vm get_status R5 
+Dec 10 12:59:40.909 HYPERVISOR: exec_cmd: vm slot_add_binding R5 0 0 C7200-IO-2FE 
+Dec 10 12:59:40.909 HYPERVISOR: exec_cmd: vm get_status R5 
+Dec 10 12:59:40.909 HYPERVISOR: exec_cmd: vm slot_add_binding R5 1 0 PA-2FE-TX 
+Dec 10 12:59:40.910 HYPERVISOR: exec_cmd: vm get_status R5 
+Dec 10 12:59:40.910 HYPERVISOR: exec_cmd: vm slot_add_binding R5 2 0 PA-2FE-TX 
+Dec 10 12:59:40.910 HYPERVISOR: exec_cmd: vm get_status R5 
+Dec 10 12:59:40.911 HYPERVISOR: exec_cmd: vm slot_add_binding R5 3 0 PA-FE-TX 
+Dec 10 12:59:43.360 HYPERVISOR: exec_cmd: nio create_udp udp-2cd81b2a-def6-4ea8-9248-49e00e9a362a 10038 127.0.0.1 10039 
+Dec 10 12:59:43.612 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R5 0 0 udp-2cd81b2a-def6-4ea8-9248-49e00e9a362a 
+Dec 10 12:59:43.613 HYPERVISOR: exec_cmd: vm get_status R5 
+Dec 10 12:59:43.675 HYPERVISOR: exec_cmd: nio create_udp udp-59274040-2f34-4ab4-961b-c7fd1246d419 10044 127.0.0.1 10045 
+Dec 10 12:59:43.678 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R5 0 1 udp-59274040-2f34-4ab4-961b-c7fd1246d419 
+Dec 10 12:59:43.679 HYPERVISOR: exec_cmd: vm get_status R5 
+Dec 10 12:59:51.392 HYPERVISOR: exec_cmd: vm set_ghost_status R5 2 
+Dec 10 12:59:51.393 HYPERVISOR: exec_cmd: vm set_ghost_file R5 C:\Users\ameri\Documentos\ESCOM\7semestre\Redes3\Ex02\Examen2\project-files\dynamips\c7200-a3jk9s-mz.124-25g.image-512.ghost 
+Dec 10 12:59:51.395 HYPERVISOR: exec_cmd: vm get_status R5 
+Dec 10 12:59:51.397 HYPERVISOR: exec_cmd: vm set_config R5 configs\i5_startup-config.cfg configs\i5_private-config.cfg 
+Dec 10 12:59:51.398 HYPERVISOR: exec_cmd: vm start R5 
+Dec 10 13:24:27.589 HYPERVISOR: exec_cmd: vm get_status R5 
+Dec 10 13:24:27.590 HYPERVISOR: exec_cmd: vm stop R5 
+Dec 10 13:24:27.762 VM: VM R5 shutdown.
+Dec 10 13:24:27.763 HYPERVISOR: exec_cmd: vm extract_config R5 
+Dec 10 13:24:27.963 HYPERVISOR: exec_cmd: vm get_status R5 
+Dec 10 13:24:27.964 HYPERVISOR: exec_cmd: vm extract_config R5 
+Dec 10 13:24:27.967 HYPERVISOR: exec_cmd: vm delete R5 
+Dec 10 13:24:27.967 VM: VM R5 destroyed.
+Dec 10 13:24:27.968 HYPERVISOR: exec_cmd: hypervisor stop 
+Dec 10 13:24:28.331 HYPERVISOR: Stopped.
+Dec 10 13:24:28.331 GENERAL: reset done.

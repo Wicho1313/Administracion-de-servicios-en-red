@@ -1,0 +1,9 @@
+# This the configuration for PC1
+#
+# Uncomment the following line to enable DHCP
+# dhcp
+# or the line below to m1anually setup an IP address and subnet mask
+ip 192.168.50.130/24 192.168.50.1
+#
+
+set pcname PC1

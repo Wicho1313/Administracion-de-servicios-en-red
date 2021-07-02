@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Consulta VLAN</title>
+</head>
+<body>
+	<h2>VLAN existentes y sus interfaces relacionadas</h2>
+	<p>#################################</p>
+	
+	{% for f in data %}
+		<tr>
+			<td>{{f.nombre}}</td><br>
+			<td>{{f.numero}}</td><br>
+			<td>{{f.ip}}</td><br>
+			<td>{{f.interfaz}}</td><br>
+		</tr><br>
+    
+	{% endfor %}
+
+	<p>#################################</p>
+</body>
+</html>
